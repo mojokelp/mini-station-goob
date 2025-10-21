@@ -21,7 +21,7 @@
             TypanMedic: [ 3, 3 ]
             TypanRD: [ 1, 1 ]
             TypanScience: [ 3, 3 ]
-            TypanOfficer: [ 2, 2 ]
+            TypanPatrol: [ 2, 2 ]
             TypanBorg: [ 0, 2 ]
             TypanBorgMedic: [ 0, 1 ]
             TypanCommander: [ 1, 1 ]

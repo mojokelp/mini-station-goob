@@ -41,7 +41,7 @@
   description: Специальный костюм для работ в самых "горячих" зонах отдела Атмоса Синдиката
   components:
   - type: Sprite
-    sprite: _Mini/Clothing/Head/hardsuitsHelmets/atmospherics.rsi
+    sprite: _Mini/Clothing/Head/Hardsuits/atmospherics.rsi
     layers:
     - state: icon
     - state: icon-unshaded
@@ -142,7 +142,7 @@
   description: Специальный костюм для работ в самых "горячих" баталиях.
   components:
   - type: Sprite
-    sprite: _Mini/Clothing/Head/hardsuitsHelmets/syndie.rsi
+    sprite: _Mini/Clothing/Head/Hardsuits/syndie.rsi
     layers:
     - state: icon
     - state: icon-unshaded
@@ -292,7 +292,7 @@
 
 - type: entity
   parent: ClothingOuterHardsuitSecurity
-  id: ClothingOuterHardsuitTypanRecruit
+  id: ClothingOuterHardsuitTypanPatrol
   name: скафандр патрульного
   description: Укреплённый скафандр с бронепластинами, предназначенный для работы в космосе. Немного повышает вашу скорость.
   components:
@@ -302,7 +302,7 @@
     sprite: _Mini/Clothing/OuterClothing/Hardsuits/typan_patrol.rsi
   - type: ToggleableClothing
     clothingPrototypes:
-      head: ClothingHeadHelmetHardsuitTypanRecruit
+      head: ClothingHeadHelmetHardsuitTypanPatrol
   - type: Tag
     tags: [] # ignore "WhitelistChameleon" tag
   - type: Armor

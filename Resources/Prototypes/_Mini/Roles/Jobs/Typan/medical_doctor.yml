@@ -35,7 +35,7 @@
 - type: startingGear
   id: TypanMedic
   equipment:
-    eyes: ClothingEyesHudSyndicateAgentTypan
+    eyes: ClothingEyesHudTypanMedical
     ears: ClothingHeadsetAltSyndicate
     jumpsuit: ClothingUniformJumpsuitParamedicSyndie
     outerClothing: ClothingOuterMedTypan

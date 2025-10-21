@@ -423,7 +423,7 @@
 
 # Security Officer
 - type: entity
-  id: LockerTypanRecruit
+  id: LockerTypanPatrol
   parent: LockerTypanBaseSecure
   name: шкаф патрульного
   components:

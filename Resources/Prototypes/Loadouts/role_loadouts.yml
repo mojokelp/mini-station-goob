@@ -978,7 +978,7 @@
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
-  id: JobTypanOfficer
+  id: JobTypanPatrol
   groups:
   - Inventory # Corvax-Loadouts
   - GroupTankHarness

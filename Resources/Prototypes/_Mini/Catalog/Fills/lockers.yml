@@ -215,7 +215,7 @@
       prob: 0.50
     - id: ClothingBeltSyndieHolster
     - id: TypanDoorRemote
-    - id: EmagTypan
+    - id: EmagTypanLimited
     - id: ClothingMaskGasSyndicate
 
 - type: entity
@@ -256,9 +256,9 @@
 
 # Security
 - type: entity
-  id: LockerTypanRecruitFilled
+  id: LockerTypanPatrolFilled
   suffix: Тайпан, Заполненный
-  parent: LockerTypanRecruit
+  parent: LockerTypanPatrol
   components:
   - type: StorageFill
     contents:
@@ -266,7 +266,7 @@
     - id: ClothingOuterVestWeb
     - id: ClothingBeltMilitaryWebbing
     - id: ClothingBeltSyndieHolster
-    - id: ClothingEyesHudTypanRecruit
+    - id: ClothingEyesHudTypanPatrol
     - id: ClothingHandsGlovesColorBlack
     - id: ClothingMaskGasSyndicate
     - id: WeaponPistolViper

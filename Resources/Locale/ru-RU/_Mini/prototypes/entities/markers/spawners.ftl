@@ -12,4 +12,4 @@ ent-SpawnPointLatejoinTypanRD = позднее подключение научн
 
 ent-SpawnPointLatejoinTypanScience = позднее подключение учёный Синдиката
 
-ent-SpawnPointLatejoinTypanOfficer = позднее подключение офицер телекоммуникаций Синдиката
+ent-SpawnPointLatejoinTypanPatrol = позднее подключение патрульный Синдиката

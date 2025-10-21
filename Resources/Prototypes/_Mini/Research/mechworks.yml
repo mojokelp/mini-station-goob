@@ -270,7 +270,7 @@
   recipeUnlocks:
   - ClothingEyesHudTypanDiagnostic
   - ClothingEyesHudTypanMedical
-  - ClothingEyesHudTypanRecruit
+  - ClothingEyesHudTypanPatrol
   - ClothingEyesHudTypanResearch
   - ClothingEyesHudTypanAdvanced
   # Goobstation R&D Console rework start

@@ -41,9 +41,9 @@
   description: Лёгкий шлем для скафандра, который не сковывает движения головы.
   components:
   - type: Sprite
-    sprite: _Mini/Clothing/Head/hardsuitsHelmets/syndicate.rsi
+    sprite: _Mini/Clothing/Head/Hardsuits/syndicate.rsi
   - type: Clothing
-    sprite: _Mini/Clothing/Head/hardsuitsHelmets/syndicate.rsi
+    sprite: _Mini/Clothing/Head/Hardsuits/syndicate.rsi
   - type: PointLight
     color: "#5ad65a"
   - type: PressureProtection

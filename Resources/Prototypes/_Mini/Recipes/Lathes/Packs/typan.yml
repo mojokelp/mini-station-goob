@@ -240,7 +240,7 @@
   - ClothingUniformJumpsuitTypanCommunicationsOfficer
   - ClothingUniformJumpsuitTypanMedic
   - ClothingUniformJumpsuitTypanParamedic
-  - ClothingUniformJumpsuitTypanRecruit
+  - ClothingUniformJumpsuitTypanPatrol
   - ClothingUniformJumpsuitTypanResearchDirector
   - ClothingUniformJumpsuitTypanResearcher
   - ClothingUniformJumpsuitTypanTechnician
@@ -253,7 +253,7 @@
   - ClothingUniformJumpskirtTypanCommunicationsOfficer
   - ClothingUniformJumpskirtTypanMedic
   - ClothingUniformJumpskirtTypanParamedic
-  - ClothingUniformJumpskirtTypanRecruit
+  - ClothingUniformJumpskirtTypanPatrol
   - ClothingUniformJumpskirtTypanResearchDirector
   - ClothingUniformJumpskirtTypanResearcher
   - ClothingUniformJumpskirtTypanTechnician
@@ -368,7 +368,7 @@
   - SignallerAdvanced
   - ClothingEyesHudTypanDiagnostic
   - ClothingEyesHudTypanMedical
-  - ClothingEyesHudTypanRecruit
+  - ClothingEyesHudTypanPatrol
   - ClothingEyesHudTypanResearch
   - ClothingEyesHudTypanAdvanced
   - ClothingEyesNightVisionGogglesSyndie

@@ -1,0 +1,63 @@
+- type: job
+  id: TypanCommander
+  name: job-name-typan-command
+  playTimeTracker: TypanCommander
+  description: job-description-typan-command
+  startingGear: TypanCommander
+  icon: "JobIconSyndicateFormal"
+  supervisors: job-supervisors-typan-syndicate
+  canBeAntag: false
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobTypanPatrol
+      time: 36000 # 10 hours
+    - !type:DepartmentTimeRequirement
+      department: Typan
+      time: 180000 # 50 hours
+      requiredAge: 26
+  access:
+  - TypanArmory
+  - TypanAtmospherics
+  - TypanCargo
+  - TypanCommand
+  - TypanCommunicationsOfficer
+  - TypanEngineering
+  - TypanMaint
+  - TypanMedical
+  - TypanProtection
+  - TypanResearchDirector
+  - TypanScience
+  - TypanService
+  - TypanTechnicalOperationsSupervisor
+  - TypanVault
+  - TypanExternal
+  - SyndicateAgent
+  - NuclearOperative
+  special:
+  - !type:AddComponentSpecial
+    components:
+      - type: Skills # Corvax-Next-Skills
+        skills:
+        - ShuttleControl
+        - Shooting
+        - MedicalEquipment
+        - Surgery
+
+- type: startingGear
+  id: TypanCommander
+  equipment:
+    ears: ClothingHeadsetAltSyndicate
+    shoes: ClothingShoesBootsCombat
+    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+    gloves: ClothingHandsGlovesCombat
+    id: SyndiPDACom
+    pocket1: SyndicateWhistle
+    pocket2: ClothingMaskGasSyndicate
+    eyes: ClothingEyesHudTypan
+    head: ClothingHeadHatSyndieMAA
+    neck: ClothingNeckCloakSyndicateAdmiral
+    outerClothing: ClothingOuterVestWeb
+  storage:
+    back:
+    - AccessConfiguratorTypan
+    - TypanDoorRemote

@@ -82,7 +82,7 @@
 
 - type: entity
   parent: ClothingEyesBase
-  id: ClothingEyesHudTypanRecruit
+  id: ClothingEyesHudTypanPatrol
   name: охранный визор
   description: Тактический окуляр с системой идентификации, отображающий должностной статус всех гуманоидов в поле зрения.
   suffix: Тайпан

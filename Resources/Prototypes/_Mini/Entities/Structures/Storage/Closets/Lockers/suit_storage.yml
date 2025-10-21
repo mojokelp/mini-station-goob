@@ -53,14 +53,14 @@
 
 # Рекрут
 - type: entity
-  id: SuitStorageTypanRecruitFilled
+  id: SuitStorageTypanPatrolFilled
   parent: SuitStorageTypanBase
   suffix: Тайпан, Патрульный
   components:
   - type: StorageFill
     contents:
     - id: OxygenTankFilled
-    - id: ClothingOuterHardsuitTypanRecruit
+    - id: ClothingOuterHardsuitTypanPatrol
   - type: AccessReader
     access: [["TypanCommand"]]
 
@@ -75,4 +75,4 @@
     - id: OxygenTankFilled
     - id: ClothingOuterHardsuitSyndieElite
   - type: AccessReader
-    access: [["TypanCommander"]]
+    access: [["TypanTechnicalOperationsSupervisor"]]

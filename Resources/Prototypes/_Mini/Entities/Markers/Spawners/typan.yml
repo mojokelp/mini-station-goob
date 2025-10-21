@@ -77,7 +77,7 @@
 
 - type: entity
   name: latejoin syndicate telecommunications officer
-  id: SpawnPointLatejoinTypanOfficer
+  id: SpawnPointLatejoinTypanPatrol
   parent: SpawnPointJobBase
   components:
   - type: Sprite
@@ -177,11 +177,11 @@
 
 - type: entity
   name: latejoin syndicate officer
-  id: SpawnTypanOfficer
+  id: SpawnTypanPatrol
   parent: SpawnPointJobBase
   components:
   - type: Sprite
     state: green
   - type: SpawnPoint
-    job_id: TypanOfficer
+    job_id: TypanPatrol
     spawn_type: Job

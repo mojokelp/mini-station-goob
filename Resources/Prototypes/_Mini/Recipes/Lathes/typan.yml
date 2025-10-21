@@ -536,8 +536,8 @@
     Silver: 50
 
 - type: latheRecipe
-  id: ClothingEyesHudTypanRecruit
-  result: ClothingEyesHudTypanRecruit
+  id: ClothingEyesHudTypanPatrol
+  result: ClothingEyesHudTypanPatrol
   completetime: 30
   materials:
     Steel: 200
