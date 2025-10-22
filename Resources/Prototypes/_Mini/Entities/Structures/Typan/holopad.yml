@@ -108,7 +108,7 @@
   suffix: Тайпан, Офицер телекоммуникаций
   components:
   - type: Label
-    currentLabel: holopad-Typan-communications-officer
+    currentLabel: holopad-typan-communications-officer
 
 - type: entity
   parent: HolopadTypanLongRange
@@ -116,7 +116,7 @@
   suffix: Тайпан, Директор исследований
   components:
   - type: Label
-    currentLabel: holopad-Typan-research-director
+    currentLabel: holopad-typan-research-director
 
 - type: entity
   parent: HolopadTypanLongRange
@@ -124,7 +124,7 @@
   suffix: Тайпан, Руководитель техобеспечения
   components:
   - type: Label
-    currentLabel: holopad-Typan-technical-operations-supervisor
+    currentLabel: holopad-typan-technical-operations-supervisor
 
 - type: entity
   parent: HolopadTypan
@@ -132,7 +132,7 @@
   suffix: Тайпан, Снабжение
   components:
   - type: Label
-    currentLabel: holopad-Typan-cargo
+    currentLabel: holopad-typan-cargo
 
 - type: entity
   parent: HolopadTypan
@@ -140,7 +140,7 @@
   suffix: Тайпан, Медблок
   components:
   - type: Label
-    currentLabel: holopad-Typan-medical
+    currentLabel: holopad-typan-medical
 
 - type: entity
   parent: HolopadTypan
@@ -148,7 +148,7 @@
   suffix: Тайпан, Вирусология
   components:
   - type: Label
-    currentLabel: holopad-Typan-virology
+    currentLabel: holopad-typan-virology
 
 - type: entity
   parent: HolopadTypan
@@ -156,7 +156,7 @@
   suffix: Тайпан, Инженерный
   components:
   - type: Label
-    currentLabel: holopad-Typan-engineering
+    currentLabel: holopad-typan-engineering
 
 - type: entity
   parent: HolopadTypan
@@ -164,7 +164,7 @@
   suffix: Тайпан, Атмосферный
   components:
   - type: Label
-    currentLabel: holopad-Typan-atmospherics
+    currentLabel: holopad-typan-atmospherics
 
 - type: entity
   parent: HolopadTypan
@@ -172,7 +172,7 @@
   suffix: Тайпан, Исследовательский
   components:
   - type: Label
-    currentLabel: holopad-Typan-research
+    currentLabel: holopad-typan-research
 
 - type: entity
   parent: HolopadTypan
@@ -180,7 +180,7 @@
   suffix: Тайпан, Охрана
   components:
   - type: Label
-    currentLabel: holopad-Typan-security
+    currentLabel: holopad-typan-security
 
 - type: entity
   parent: HolopadTypan
@@ -188,7 +188,7 @@
   suffix: Тайпан, Сервис
   components:
   - type: Label
-    currentLabel: holopad-Typan-service
+    currentLabel: holopad-typan-service
 
 - type: entity
   parent: HolopadTypan
@@ -196,4 +196,4 @@
   suffix: Тайпан, Ядро ИИ
   components:
   - type: Label
-    currentLabel: holopad-Typan-ai-core
+    currentLabel: holopad-typan-ai-core

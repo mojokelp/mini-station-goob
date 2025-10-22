@@ -136,7 +136,7 @@
       - PositronicBrain
       borg_module:
       - BorgModuleEsword
-      - BorgModuleC20r
+      # - BorgModuleC20r
   - type: ItemSlots
     slots:
       cell_slot:

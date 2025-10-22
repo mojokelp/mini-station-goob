@@ -1,7 +1,7 @@
 - type: job
   id: TypanScience
   name: job-name-typan-science
-  playTimeTracker: TypanScience
+  playTimeTracker: JobTypanScience
   description: job-description-typan-science
   startingGear: TypanScience
   icon: "JobIconSyndicateScience"
@@ -25,9 +25,10 @@
 - type: startingGear
   id: TypanScience
   equipment:
+    eyes: ClothingEyesHudTypanResearch
     ears: ClothingHeadsetAltSyndicate
     jumpsuit: ClothingUniformScienceTypan
-    outerClothing: ClothingOuterCoatLabOpened
+    outerClothing: ClothingOuterTypanCoatLabResearcher
     gloves: ClothingHandsScienceTypan
     shoes: ClothingShoesBootsCombat
     id: SyndiPDAScience

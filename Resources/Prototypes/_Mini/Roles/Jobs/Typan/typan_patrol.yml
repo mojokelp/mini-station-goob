@@ -2,7 +2,7 @@
   id: TypanPatrol
   name: job-name-typan-patrol
   playTimeTracker: TypanPatrol
-  description: job-description-typan-officer
+  description: job-description-typan-patrol
   startingGear: TypanPatrol
   icon: "JobIconSyndicateOfficer"
   supervisors: job-supervisors-typan-syndicate
@@ -52,14 +52,12 @@
     head: ClothingHeadHatSyndie
     pocket1: WeaponPistolViper
     mask: ClothingMaskGasSyndicate
-    eyes: ClothingEyesHudTypan
+    eyes: ClothingEyesHudTypanPatrol
     outerClothing: ClothingOuterWinterSyndieCapArmored
   storage:
     back:
     - MagazinePistolIncendiary
     - MagazinePistolIncendiary
-    - Stunprod
     - Zipties
     - Zipties
-    - SurvivalMedipen
 

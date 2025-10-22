@@ -14,8 +14,8 @@
   - ShuttleGunKineticCircuitboard
    # Goobstation R&D Console rework start
   position: 0,6
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -41,8 +41,8 @@
   - MagazineBoxRifleIncendiary
    # Goobstation R&D Console rework start
   position: 0,5
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -61,8 +61,8 @@
   - WeaponDisabler
    # Goobstation R&D Console rework start
   position: 0,4
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -87,8 +87,8 @@
   - BoxShotgunUranium
      # Goobstation R&D Console rework start
   position: 0,3
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -107,8 +107,8 @@
   - WeaponDisablerSMG
      # Goobstation R&D Console rework start
   position: 0,3
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -130,8 +130,8 @@
   - ChemicalPayload
      # Goobstation R&D Console rework start
   position: 0,2
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -147,8 +147,8 @@
   - ClothingBackpackElectropack
      # Goobstation R&D Console rework start
   position: 0,2
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -165,8 +165,8 @@
   - WeaponRevolverPython
      # Goobstation R&D Console rework start
   position: 0,2
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -183,8 +183,8 @@
   - ThrowingKnife
      # Goobstation R&D Console rework start
   position: 0,2
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -201,8 +201,8 @@
   - ClothingHandsGlovesBoxingRigged
      # Goobstation R&D Console rework start
   position: 0,2
-  technologyPrerequisites:
-  - TypanMagnetsTech
+  # technologyPrerequisites:
+  # - TypanMagnetsTech
   # Goobstation R&D Console rework end
 
 - type: technology
@@ -429,15 +429,15 @@
   - WeaponLauncherChinaLake
   # Goobstation R&D Console rework start
   position: 0,-8
-  technologyPrerequisites:
-  - TypanGrenades
+  # technologyPrerequisites:
+  # - TypanGrenades
   # Goobstation R&D Console rework end
 
 - type: technology
   id: TypanSpecialWeapons
   name: research-technology-special-weapons
   icon:
-    sprite: _Goobstation/Objects/Weapons/Guns/Bow/hardlight_bow.rsi
+    sprite: _Goobstation/Objects/Weapons/Guns/Battery/miniature_ebow.rsi
     state: icon
   discipline: TypanWeaponry
   tier: 3

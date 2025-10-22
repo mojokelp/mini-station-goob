@@ -1,7 +1,7 @@
 - type: job
   id: TypanMedic
   name: job-name-typan-medic
-  playTimeTracker: TypanMedic
+  playTimeTracker: JobTypanMedic
   description: job-description-typan-medic
   startingGear: TypanMedic
   icon: "JobIconSyndicateParamedic"
@@ -38,7 +38,7 @@
     eyes: ClothingEyesHudTypanMedical
     ears: ClothingHeadsetAltSyndicate
     jumpsuit: ClothingUniformJumpsuitParamedicSyndie
-    outerClothing: ClothingOuterMedTypan
+    outerClothing: ClothingOuterTypanCoatLabMed
     shoes: ClothingShoesBootsCombat
     id: MedicalPDASyndi
     belt: ClothingBeltMedicalFilled

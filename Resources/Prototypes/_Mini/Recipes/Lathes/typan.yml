@@ -468,14 +468,14 @@
   id: SawAdvanced
   result: SawAdvanced
 
-# - type: latheRecipe
-#   id: ADTCyberHypospray
-#   result: ADTCyberHypospray
-#   completetime: 10
-#   materials:
-#     Steel: 200
-#     Glass: 400
-#     Silver: 300
+- type: latheRecipe
+  id: SyndiHypo
+  result: SyndiHypo
+  completetime: 10
+  materials:
+    Steel: 200
+    Glass: 400
+    Silver: 300
 
 - type: latheRecipe
   id: Hypopen

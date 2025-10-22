@@ -1,7 +1,7 @@
 - type: job
   id: TypanChef
   name: job-name-typan-chef
-  playTimeTracker: TypanChef
+  playTimeTracker: JobTypanChef
   description: job-description-typan-chef
   startingGear: TypanChef
   icon: "JobIconTypanChef"

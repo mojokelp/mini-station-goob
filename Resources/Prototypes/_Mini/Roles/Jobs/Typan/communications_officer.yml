@@ -1,7 +1,7 @@
 - type: job
   id: TypanCommander
   name: job-name-typan-command
-  playTimeTracker: TypanCommander
+  playTimeTracker: JobTypanCommander
   description: job-description-typan-command
   startingGear: TypanCommander
   icon: "JobIconSyndicateFormal"
@@ -56,8 +56,7 @@
     eyes: ClothingEyesHudTypan
     head: ClothingHeadHatSyndieMAA
     neck: ClothingNeckCloakSyndicateAdmiral
-    outerClothing: ClothingOuterVestWeb
+    outerClothing: ClothingOuterTrenchTypanCommunicationsOfficer
   storage:
     back:
     - AccessConfiguratorTypan
-    - TypanDoorRemote

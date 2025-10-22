@@ -76,3 +76,16 @@
     - id: ClothingOuterHardsuitSyndieElite
   - type: AccessReader
     access: [["TypanTechnicalOperationsSupervisor"]]
+
+# Директор исследований
+- type: entity
+  id: SuitStorageTypanRDFilled
+  parent: SuitStorageTypanBase
+  suffix: Тайпан, Директор исследований
+  components:
+  - type: StorageFill
+    contents:
+    - id: OxygenTankFilled
+    - id: ClothingOuterHardsuitRDSindi
+  - type: AccessReader
+    access: [["TypanTechnicalOperationsSupervisor"]]

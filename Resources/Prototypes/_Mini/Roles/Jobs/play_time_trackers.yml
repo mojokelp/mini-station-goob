@@ -1,26 +1,26 @@
 - type: playTimeTracker
-  id: TypanCommander
+  id: JobTypanCommander
 
 - type: playTimeTracker
-  id: TypanRD
+  id: JobTypanRD
 
 - type: playTimeTracker
-  id: TypanAtmosTech
+  id: JobTypanAtmosTech
 
 - type: playTimeTracker
-  id: TypanBotanist
+  id: JobTypanBotanist
 
 - type: playTimeTracker
-  id: TypanCargotech
+  id: JobTypanCargotech
 
 - type: playTimeTracker
-  id: TypanChef
+  id: JobTypanChef
 
 - type: playTimeTracker
-  id: TypanMedic
+  id: JobTypanMedic
 
 - type: playTimeTracker
-  id: TypanScience
+  id: JobTypanScience
 
 - type: playTimeTracker
   id: JobBorgTypan
@@ -29,4 +29,7 @@
   id: JobBorgTypanMedic
 
 - type: playTimeTracker
-  id: TypanPatrol
+  id: JobTypanPatrol
+
+- type: playTimeTracker
+  id: JobTypanTechnician

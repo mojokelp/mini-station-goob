@@ -1,7 +1,7 @@
 - type: job
   id: TypanBotanist
   name: job-name-typan-botanist
-  playTimeTracker: TypanBotanist
+  playTimeTracker: JobTypanBotanist
   description: job-description-typan-botanist
   startingGear: SyndicateBotanist
   icon: "JobIconTypanBotanist"
