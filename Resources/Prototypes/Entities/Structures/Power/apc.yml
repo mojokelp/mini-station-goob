@@ -77,7 +77,7 @@
     netsync: false
   - type: Clickable
   - type: AccessReader
-    access: [["Engineering"]]
+    access: [["Engineering"], ["TypanEngineering"]]
   - type: InteractionOutline
   - type: Transform
     anchored: true
