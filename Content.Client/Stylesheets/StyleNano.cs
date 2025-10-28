@@ -421,6 +421,17 @@ namespace Content.Client.Stylesheets
 
             var buttonContext = new StyleBoxTexture { Texture = Texture.White };
 
+            var backgroundTex = resCache.GetTexture("/Textures/Interface/Nano/lobby_b.png");
+            var background = new StyleBoxTexture
+            {
+                Texture = backgroundTex,
+                Mode = StyleBoxTexture.StretchMode.Tile
+            };
+
+            background.SetPatchMargin(StyleBox.Margin.All, 24);
+            background.SetExpandMargin(StyleBox.Margin.All, -4);
+            background.SetContentMarginOverride(StyleBox.Margin.All, 8);
+
             var buttonRectTex = resCache.GetTexture("/Textures/Interface/Nano/light_panel_background_bordered.png");
             var buttonRect = new StyleBoxTexture(BaseButton)
             {
@@ -916,6 +927,13 @@ namespace Content.Client.Stylesheets
                 Element<ConfirmButton>()
                     .Pseudo(ConfirmButton.ConfirmPrefix + ContainerButton.StylePseudoClassDisabled)
                     .Prop(Control.StylePropertyModulateSelf, ButtonColorCautionDisabled),
+
+                new StyleRule(
+                    new SelectorElement(null, new[] {StyleClassLobbyBackground}, null, null),
+                    new[]
+                    {
+                        new StyleProperty(PanelContainer.StylePropertyPanel, background),
+                    }),
 
                 new StyleRule(new SelectorChild(
                     new SelectorElement(typeof(Button), null, null, new[] {ContainerButton.StylePseudoClassDisabled}),
