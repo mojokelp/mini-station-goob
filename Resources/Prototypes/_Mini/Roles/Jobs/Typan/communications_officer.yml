@@ -53,7 +53,7 @@
     id: SyndiPDACom
     pocket1: SyndicateWhistle
     pocket2: ClothingMaskGasSyndicate
-    eyes: ClothingEyesHudTypan
+    eyes: ClothingEyesHudTypanAdvanced
     head: ClothingHeadHatSyndieMAA
     neck: ClothingNeckCloakSyndicateAdmiral
     outerClothing: ClothingOuterTrenchTypanCommunicationsOfficer

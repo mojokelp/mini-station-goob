@@ -16,6 +16,7 @@
   - TypanAtmospherics
   - TypanMaint
   - SyndicateAgent
+  - TypanExternal
   special:
   - !type:AddComponentSpecial
     components:
