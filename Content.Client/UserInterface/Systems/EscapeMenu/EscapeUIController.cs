@@ -144,11 +144,11 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
             _info.OpenWindow();
         };
 
-        // _escapeWindow.DisconnectButton.OnPressed += _ =>
-        // {
-        //     CloseEscapeWindow();
-        //     _console.ExecuteCommand("disconnect");
-        // };
+        _escapeWindow.DisconnectButton.OnPressed += _ =>
+        {
+            CloseEscapeWindow();
+            _console.ExecuteCommand("disconnect");
+        };
 
         _escapeWindow.OptionsButton.OnPressed += _ =>
         {
