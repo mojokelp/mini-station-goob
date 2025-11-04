@@ -106,4 +106,4 @@
   suffix: rare.
   components:
   - type: TechnologyDisk
-    stealGroup: RareTechDiskTierWeights
+    tierWeightPrototype: RareTechDiskTierWeights
