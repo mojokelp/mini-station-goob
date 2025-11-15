@@ -138,6 +138,14 @@ public sealed class EscapeUIController : UIController, IOnStateEntered<GameplayS
         };
         CorvaxGoob-Coins-end */
 
+        // ADT ROADMAP TWEAK
+        _escapeWindow.RoadmapButton.OnPressed += _ =>
+        {
+            CloseEscapeWindow();
+            UIManager.GetUIController<RoadmapUIController>().ToggleRoadmap();
+        };
+        // ADT ROADMAP TWEAK
+
         _escapeWindow.RulesButton.OnPressed += _ =>
         {
             CloseEscapeWindow();

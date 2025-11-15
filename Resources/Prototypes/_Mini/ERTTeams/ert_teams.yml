@@ -13,7 +13,7 @@
         RandomHumanoidSpawnerERTJanitor: 1
         RandomHumanoidSpawnerERTEngineer: 1
       mustApproveAdmin: false
-      requiredRoundDuration: 600 # min
+      requiredRoundDuration: 15 # 15 min
     red:
       name: ert-team-name-red
       announcementAfterCall: ert-call-announcement-red
@@ -58,4 +58,4 @@
       humansList:
         RandomHumanoidSpawnerCBURNUnit: 8
       mustApproveAdmin: true
-      requiredRoundDuration: 10 # min
+      requiredRoundDuration: 15 # min
