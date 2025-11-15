@@ -12,7 +12,7 @@
                 <Label Name="StateText" Access="Public" HorizontalAlignment="Right" Align="Right" Margin="0 0 5 0" />
             </BoxContainer>
         </BoxContainer>
-        <PanelContainer Name="StateColor" Access="Public" VerticalExpand="True" MinWidth="5" MaxWidth="5">
+        <PanelContainer Name="StateColor" Access="Public" VerticalExpand="True" HorizontalExpand="False" MinWidth="5" MaxWidth="5">
             <PanelContainer.PanelOverride>
                 <gfx:StyleBoxFlat />
             </PanelContainer.PanelOverride>
