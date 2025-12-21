@@ -5,18 +5,18 @@ using Robust.Shared.Prototypes;
 namespace Content.Goobstation.Server.Disease.Effects;
 
 /// <summary>
-/// Reduces the progress of diseases of chosen type on the entity.
+/// Уменьшает прогресс болезней выбранного типа на цели.
 /// </summary>
 public sealed partial class DiseaseProgressChange : EntityEffect
 {
     /// <summary>
-    /// Diseases of which type to affect.
+    /// Типы болезней, на которые действует эффект.
     /// </summary>
     [DataField]
     public ProtoId<DiseaseTypePrototype> AffectedType;
 
     /// <summary>
-    /// How much to add to the disease progress.
+    /// Величина изменения прогресса болезни.
     /// </summary>
     [DataField]
     public float ProgressModifier = -0.02f;
@@ -29,7 +29,7 @@ public sealed partial class DiseaseProgressChange : EntityEffect
         return Loc.GetString("reagent-effect-guidebook-disease-progress-change",
             ("chance", Probability),
             ("type", prototype.Index<DiseaseTypePrototype>(AffectedType).LocalizedName),
-            ("amount", ProgressModifier));
+            ("modifier", ProgressModifier)); // Изменено с "amount" на "modifier"
     }
 
     public override void Effect(EntityEffectBaseArgs args)
@@ -52,7 +52,7 @@ public sealed partial class DiseaseProgressChange : EntityEffect
                     amt *= reagentArgs.Scale.Float();
                 }
 
-                sys.ChangeInfectionProgress(diseaseUid, amt, disease);
+                sys.ChangeInfectionProgress((diseaseUid, disease), amt);
             }
         }
     }
