@@ -1,11 +1,11 @@
-# This file includes all the actions for wraith.
-# Revenants, other ghost-roles should get their own directory outside the Wraith one.
+# Этот файл содержит все действия для Рейта.
+# Оборотни и другие роли призраков должны быть в отдельной директории вне папки Рейта.
 
-#   - type: ActionWraithPoints -> Removes Wraith Points once the action gets handled
-#    wpConsume: int -> Amount of Wraith Points to remove
+#   - type: ActionWraithPoints -> Удаляет Очки Рейта при использовании действия
+#    wpConsume: int -> Количество Очков Рейта для удаления
 
-# Base Wraith Actions
-- type: entity # Unused - Requires Rework of ghost system to allow re-usable actions
+# Базовые действия Рейта
+- type: entity # Не используется - Требуется переработка системы призраков для многоразовых действий
   parent: ActionToggleGhostHearing
   id: ActionToggleGhostHearingWraith
   components:
@@ -17,8 +17,8 @@
 
 - type: entity
   id: ActionHaunt
-  name: Haunt
-  description: Become corporeal for 30 seconds. During this time, you gain additional wraith points, depending on the amount of humans in your vicinity. Use this ability again while corporeal to fade back into the aether.
+  name: Вселяться
+  description: Станьте материальным на 30 секунд. В это время вы получаете дополнительные очки рейта в зависимости от количества людей поблизости. Используйте эту способность повторно, будучи материальным, чтобы раствориться в эфире.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -33,8 +33,8 @@
 - type: entity
   id: ActionWhisper
   parent: DemonicWhisperAction
-  name: Whisper
-  description: Send an ethereal message to a living being.
+  name: Шёпот
+  description: Отправьте эфирное сообщение живому существу.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -46,8 +46,8 @@
 
 - type: entity
   id: ActionBloodWriting
-  name: Blood Writing
-  description: Write a spooky character on the ground.
+  name: Кровавые Письмена
+  description: Напишите жуткий символ на земле.
   components:
   - type: Action
     useDelay: 5
@@ -59,8 +59,8 @@
 
 - type: entity
   id: ActionAbsorbCorpse
-  name: Absorb corpse
-  description: Steal life essence from a corpse. You cannot use this on a skeleton!
+  name: Поглотить труп
+  description: Украдите жизненную силу из трупа. Нельзя использовать на скелете!
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -90,8 +90,8 @@
 
 - type: entity
   id: ActionSpook
-  name: Spook
-  description: Cause freaky, weird, creepy or spooky stuff to happen in an area around you. Use this ability to spawn an entity as the origin of these events, then interact with it to select which action to use.
+  name: Пугать
+  description: Вызовите жуткие, странные и пугающие события в области вокруг себя. Используйте эту способность, чтобы создать сущность как источник этих событий, затем взаимодействуйте с ней, чтобы выбрать конкретное действие.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -110,8 +110,8 @@
 
 - type: entity
   id: ActionDecay
-  name: Decay
-  description: Cause a human to lose stamina, or an object to malfunction.
+  name: Разложение
+  description: Заставьте человека потерять выносливость или механизм выйти из строя.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -135,8 +135,8 @@
 
 - type: entity
   id: ActionCommand
-  name: Command
-  description: Command a few objects to hurl themselves at the target location.
+  name: Командовать
+  description: Прикажите нескольким предметам полететь в указанную локацию.
   components:
   - type: Action
     useDelay: 40
@@ -158,8 +158,8 @@
 - type: entity
   id: ActionAnimateObject
   parent: ActionAnimateSpell
-  name: Animate object
-  description: Animate an inanimate object to attack nearby humans.
+  name: Оживить предмет
+  description: Оживите неодушевлённый предмет, чтобы он атаковал ближайших людей.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -173,8 +173,8 @@
 
 - type: entity
   id: ActionPossessObject
-  name: Possess object
-  description: Possess and control an everyday object. Freakout level high.
+  name: Овладеть предметом
+  description: Вселитесь и возьмите под контроль обычный предмет. Уровень переполоха: высокий.
   components:
   - type: ActionWraithPoints
     wpConsume: 300
@@ -189,7 +189,7 @@
   - type: EntityTargetAction
     whitelist:
       components:
-      - Animateable # Currently on: SeatBase, TableBase, ClosetBase, BaseMachine, ConstructibleMachine, BaseComputer, BaseItem, CrateGeneric, StorageTank, GasCanister
+      - Animateable # В настоящее время: SeatBase, TableBase, ClosetBase, BaseMachine, ConstructibleMachine, BaseComputer, BaseItem, CrateGeneric, StorageTank, GasCanister
     blacklist:
       components:
       - NukeDisk
@@ -236,7 +236,7 @@
         thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 300 #Easily killable with holy damage so it has to be somewhat high for it to be worth the wraith risking it
+            damage: 300 #Легко убивается святым уроном, поэтому должно быть довольно высоко, чтобы риск был оправдан
           behaviors:
           - !type:DoActsBehavior
             acts: ["Destruction"]
@@ -258,8 +258,8 @@
 
 - type: entity
   id: ActionEvolve
-  name: Evolve
-  description: Choose a form to evolve into once you have absorbed at least 3 souls.
+  name: Эволюционировать
+  description: Выберите форму для эволюции после поглощения как минимум 3 душ.
   components:
   - type: Action
     useDelay: 0
@@ -271,11 +271,11 @@
   - type: ActionWraithPoints
     wpConsume: 150
 
-# Harbinger Actions
+# Действия Вестника Бездны
 - type: entity
   id: ActionRaiseSkeleton
-  name: Raise skeleton
-  description: Raise a skeletonized dead body or fill a locker with an indurable skeletal servant.
+  name: Поднять скелет
+  description: Воскресите окостеневшее мёртвое тело или наполните шкаф неистребимым скелетом-слугой.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -300,8 +300,8 @@
 
 - type: entity
   id: ActionSummonVoidPortal
-  name: Summon void portal
-  description: Summon a void portal from which otherworldly creatures pour out.
+  name: Призвать портал Бездны
+  description: Призовите портал Бездны, из которого хлынут потусторонние существа.
   components:
   - type: ConfirmableAction
     popup: wraith-portal-already
@@ -325,8 +325,8 @@
 
 - type: entity
   id: ActionSummonVoidCreature
-  name: Summon void creatures
-  description: Attempt to breach the veil between worlds to allow a lesser void creature to enter this realm.
+  name: Призвать созданий Бездны
+  description: Попытайтесь прорвать завесу между мирами, чтобы позволить низшему созданию Бездны проникнуть в этот мир.
   components:
   - type: Action
     useDelay: 150
@@ -340,8 +340,8 @@
 
 - type: entity
   id: ActionMakeRevenant
-  name: Make revenant
-  description: Take control of an intact corpse as a powerful Revenant! You will not be able to absorb this corpse later. As a revenant, you gain increased point generation, but your revenant abilities cost much more points than normal.
+  name: Создать Оборотня
+  description: Возьмите под контроль целый труп в виде могущественного Оборотня! Позже вы не сможете поглотить этот труп. Как Оборотень, вы получаете повышенную генерацию очков, но ваши способности Оборотня стоят намного больше обычных.
   components:
   - type: Action
     useDelay: 60
@@ -357,7 +357,7 @@
   - type: ActionWraithPoints
     wpConsume: 1000
 
-# Plaguebringer Actions
+# Действия Чумоносца
 
 - type: entity
   id: BaseCurseAction
@@ -373,16 +373,16 @@
       - Body
     canTargetSelf: false
     event: !type:ApplyCurseActionEvent
-  - type: CurseAction # refreshes all curses when a curse is used
+  - type: CurseAction # обновляет все проклятия при использовании любого проклятия
   - type: ActionWraithPoints
     wpConsume: 40
 
 
 - type: entity
   id: ActionCurseBlindness
-  name: Curse of blindness
+  name: Проклятие Слепоты
   parent: BaseCurseAction
-  description: Curse the living with blindness.
+  description: Прокляните живого слепотой.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -399,9 +399,9 @@
 
 - type: entity
   id: ActionCurseWeakness
-  name: Curse of weakness
+  name: Проклятие Слабости
   parent: BaseCurseAction
-  description: Curse the living with weakness. Applies slowdown and makes the target feel dizzy.
+  description: Прокляните живого слабостью. Замедляет цель и вызывает у неё головокружение.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -415,13 +415,13 @@
     event: !type:ApplyCurseActionEvent
       curse: CurseWeakness
       popup: curse-popup-weakness
-      # todo: sound for target
+      # todo: звук для цели
 
 - type: entity
   id: ActionCurseBlood
-  name: Curse of blood
+  name: Проклятие Крови
   parent: BaseCurseAction
-  description: Curse the living with a plague of blood.
+  description: Прокляните живого чумой крови.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -438,9 +438,9 @@
 
 - type: entity
   id: ActionCurseRot
-  name: Curse of rot
+  name: Проклятие Гнили
   parent: BaseCurseAction
-  description: Curse the living with a netherworldly plague.
+  description: Прокляните живого потусторонней чумой.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -457,9 +457,9 @@
 
 - type: entity
   id: ActionCurseDeath
-  name: Curse of death
+  name: Проклятие Смерти
   parent: BaseCurseAction
-  description: Reap a fully cursed being's soul!
+  description: Пожните душу полностью проклятого существа!
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -479,8 +479,8 @@
 
 - type: entity
   id: ActionDefile
-  name: Defile
-  description: Manifest some horrible poison inside a food item or a container. Use on self first to choose chemical.
+  name: Осквернить
+  description: Создайте ужасный яд внутри пищевого продукта или контейнера. Сначала используйте на себе, чтобы выбрать химикат.
   components:
   - type: Action
     sound: !type:SoundPathSpecifier
@@ -499,8 +499,8 @@
 
 - type: entity
   id: ActionSummonPlagueRat
-  name: Summon Plague rat
-  description: Attempt to breach the veil between worlds to allow a plague rat to enter this realm.
+  name: Призвать Чумную Крысу
+  description: Попытайтесь прорвать завесу между мирами, чтобы позволить чумной крысе проникнуть в этот мир.
   components:
   - type: Action
     useDelay: 150
@@ -512,8 +512,8 @@
 
 - type: entity
   id: ActionSummonRotHulk
-  name: Summon Rot Hulk
-  description: Assimilate the filth in an area and create an unstable servant.
+  name: Призвать Гуль-Гниющего
+  description: Ассимилируйте грязь в области и создайте нестабильного слугу.
   components:
   - type: Action
     useDelay: 90
@@ -525,4 +525,4 @@
   - type: ActionWraithPoints
     wpConsume: 120
 
-# Trickster Actions
+# Действия Трикстера (Плута/Обманщика)

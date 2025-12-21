@@ -129,7 +129,7 @@
   - blab
   name: blob-title
   description: blob-description
-  showInVote: false
+  showInVote: true
   rules:
   - BlobGameMode
   - BasicStationEventScheduler
@@ -237,7 +237,7 @@
   - ayyliens
   name: xenomorph-title
   description: xenomorph-description
-  showInVote: false
+  showInVote: true
   minPlayers: 1
   rules:
   - XenomorphsInfestationRoundstart
