@@ -1032,6 +1032,7 @@
   loadouts:
   - BlueshieldOfficerMaskLollypop
   - BlueshieldOfficerMaskGaiter
+  - BlueshieldOfficerMaskSwat
 
 - type: loadoutGroup
   id: BlueshieldOfficerShoes
