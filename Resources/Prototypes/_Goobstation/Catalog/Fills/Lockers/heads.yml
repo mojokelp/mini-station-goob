@@ -66,6 +66,11 @@
     - id: BlueshieldUndeterminedHardsuit
     - id: FlashlightSeclite
     - id: BluespaceLifelineImplanter # CorvaxGoob-Not-Roundstart-Implant
+    - id: EpinephrineChemistryBottle
+    - id: EphedrineChemistryBottle
+    - id: OmnizineChemistryBottle
+    - id: OmnizineChemistryBottle
+    - id: HypoBlueshield
 
 - type: entity
   id: LockerBlueshieldOfficerFilled
