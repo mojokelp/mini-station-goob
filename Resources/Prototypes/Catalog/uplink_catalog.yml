@@ -1182,6 +1182,17 @@
         components:
           - SurplusBundle
 
+- type: listing
+  id: UplinkOmnimedToolSyndie # CorvaxGoob
+  name: uplink-omnimed-tool-syndie-name
+  description: uplink-omnimed-tool-syndie-desc
+  productEntity: OmnimedToolSyndie
+  cost:
+    Telecrystal: 35
+  icon: { sprite: /Textures/_Shitmed/Objects/Specific/Medical/Surgery/omnimed.rsi, state: evil }
+  categories:
+  - UplinkDisruption
+
 
 - type: listing
   id: UplinkAntimovCircuitBoard
@@ -1215,66 +1226,45 @@
 #      tags:
 #      - NukeOpsUplink
 
+- type: listing
+  id: UplinkSurplusBundle
+  name: uplink-surplus-bundle-name
+  description: uplink-surplus-bundle-desc
+  productEntity: CrateSyndicateSurplusBundle
+  cost:
+    Telecrystal: 20
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+      - ContravendUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
-
-# - type: listing
-#   id: UplinkSurplusBundle
-#   name: uplink-surplus-bundle-name
-#   description: uplink-surplus-bundle-desc
-#   productEntity: CrateSyndicateSurplusBundle
-#   cost:
-#     Telecrystal: 100 # goob
-#   categories:
-#   - UplinkDisruption
-#   conditions:
-#   - !type:StoreWhitelistCondition
-#     blacklist:
-#       tags:
-#       - NukeOpsUplink
-#       - ContravendUplink
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
-
-# - type: listing
-#   id: UplinkSuperSurplusBundle
-#   name: uplink-super-surplus-bundle-name
-#   description: uplink-super-surplus-bundle-desc
-#   productEntity: CrateSyndicateSuperSurplusBundle
-#   cost:
-#     Telecrystal: 200 # goob
-#   categories:
-#   - UplinkDisruption
-#   conditions:
-#   - !type:StoreWhitelistCondition
-#     blacklist:
-#       tags:
-#       - NukeOpsUplink
-#       - ContravendUplink
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
-
-#- type: listing
-#  id: UplinkStarterKit
-#  name: uplink-starter-kit-name
-#  description: uplink-starter-kit-desc
-#  productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
-#  cost:
-#    Telecrystal: 200
-#  categories:
-#  - UplinkDisruption
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#        - NukeOpsUplink
-#    - !type:BuyerWhitelistCondition
-#      blacklist:
-#        components:
-#        - SurplusBundle
+- type: listing
+  id: UplinkSuperSurplusBundle
+  name: uplink-super-surplus-bundle-name
+  description: uplink-super-surplus-bundle-desc
+  productEntity: CrateSyndicateSuperSurplusBundle
+  cost:
+    Telecrystal: 60
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+      - ContravendUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
 
 - type: listing
@@ -1283,7 +1273,7 @@
   description: uplink-singularity-beacon-desc
   productEntity: SingularityBeacon
   cost:
-    Telecrystal: 30 # goob
+    Telecrystal: 20 # goob
   categories:
     - UplinkDisruption
 
@@ -1294,7 +1284,7 @@
   description: uplink-cameraBug-desc
   productEntity: CameraBug
   cost:
-    Telecrystal: 6 # goob
+    Telecrystal: 5 # goob
   categories:
   - UplinkDisruption
 
@@ -1757,7 +1747,7 @@
   description: uplink-clothing-outer-vest-web-desc
   productEntity: ClothingOuterVestWeb
   cost:
-    Telecrystal: 6 # goob
+    Telecrystal: 4 # goob
   categories:
   - UplinkWearables
 
@@ -1768,7 +1758,7 @@
   description: uplink-clothing-outer-vest-web-elite-desc
   productEntity: ClothingOuterVestWebElite
   cost:
-    Telecrystal: 8 # goob
+    Telecrystal: 6 # goob
   categories:
   - UplinkWearables
 
@@ -1960,6 +1950,17 @@
     Telecrystal: 10 # goob
   categories:
   - UplinkPointless
+
+# CorvaxGoob - Cat Maid bundle
+# - type: listing
+#   id: UplinkCatEars
+#   name: uplink-cat-ears-name
+#   description: uplink-cat-ears-desc
+#   productEntity: ClothingHeadHatCatEars
+#   cost:
+#     Telecrystal: 130 # goob
+#   categories:
+#   - UplinkPointless
 
 
 - type: listing

@@ -566,7 +566,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndieCommander
   cost:
-    Telecrystal: 20 # novelty item for the larp, doesnt come with bundle though because bulky fuck
+    Telecrystal: 12 # novelty item for the larp, doesnt come with bundle though because bulky fuck
   categories:
   - UplinkWearables
   conditions:
@@ -585,7 +585,7 @@
   icon: { sprite: /Textures/_Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateStealthHardsuitBundle
   cost:
-    Telecrystal: 16
+    Telecrystal: 14
   categories:
   - UplinkWearables
 
@@ -597,6 +597,28 @@
   productEntity: BoxReverseBearTrap
   cost:
     Telecrystal: 4 # novelty item for rp
+  categories:
+  - UplinkWearables
+
+# - type: listing
+#   id: UplinkSecondSkinSyndicate
+#   name: uplink-second-skin-name
+#   description: uplink-second-skin-desc
+#   icon: { sprite: _Goobstation/Clothing/OuterClothing/second_skin.rsi, state: action }
+#   productEntity: SecondSkinSyndicate
+#   cost:
+#     Telecrystal: 6
+#   categories:
+#   - UplinkWearables
+
+- type: listing
+  id: UplinkClothingHandsGlovesGuerrilla
+  name: uplink-guerrilla-gloves-name
+  description: uplink-guerrilla-gloves-desc
+  icon: { sprite: /Textures/_Goobstation/Clothing/Hands/Gloves/guerrilla.rsi, state: icon }
+  productEntity: ClothingHandsGlovesGuerrilla
+  cost:
+    Telecrystal: 12
   categories:
   - UplinkWearables
 
@@ -637,7 +659,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Weapons/Melee/hisgrace.rsi, state: icon }
   productEntity: HisGrace
   cost:
-    Telecrystal: 20
+    Telecrystal: 12
   categories:
   - UplinkJob
   conditions:
@@ -657,7 +679,7 @@
   description: Make the floor slippery!
   productEntity: LubeGrenade
   cost:
-    Telecrystal: 3
+    Telecrystal: 2
   categories:
     -  UplinkJob
   conditions:
@@ -673,7 +695,7 @@
   description: Make the floor hard to walk in!
   productEntity: GlueGrenade
   cost:
-    Telecrystal: 2
+    Telecrystal: 1
   categories:
     -  UplinkJob
   conditions:
@@ -689,7 +711,7 @@
   icon: { sprite: /Textures/_Goobstation/Objects/Vehicles/clowncar.rsi, state: clowncar }
   productEntity: CrateFunClownCarUplink
   cost:
-    Telecrystal: 8
+    Telecrystal: 6
   categories:
   - UplinkJob
   conditions:
@@ -730,7 +752,7 @@
   description: uplink-beenades-desc
   productEntity: BeeGrenade
   cost:
-    Telecrystal: 8
+    Telecrystal: 4
   categories:
   - UplinkJob
   conditions:
@@ -781,6 +803,23 @@
     whitelist:
     - SalvageSpecialist
 
+- type: listing
+  id: UplinkGreyTide
+  name: uplink-grey-tide-name
+  description: uplink-grey-tide-desc
+  icon: { sprite: Objects/Weapons/Melee/plasma_spear.rsi, state: spear }
+  productEntity: SpearGreyTide
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Passenger
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
 # chemicals
 
 - type: listing
@@ -789,7 +828,7 @@
   description: uplink-advanced-combat-medipen-desc
   productEntity: AdvancedCombatMedipen
   cost:
-    Telecrystal: 6
+    Telecrystal: 5
   categories:
   - UplinkChemicals
 
@@ -1571,11 +1610,11 @@
 #     - Dwarf # Rock and stone
 
 - type: listing
-  id: UplinkBloodredCasette
-  name: uplink-bloodred-casette-name
-  description: uplink-bloodred-casette-desc
-  icon: { sprite: _Goobstation/Objects/Fun/bloodmonica.rsi, state: icon }
-  productEntity: BloodredCasette
+  id: UplinkBloodredCassette
+  name: uplink-bloodred-cassette-name
+  description: uplink-bloodred-cassette-desc
+  icon: { sprite: _Goobstation/Objects/Fun/bloodred_cassette_player.rsi, state: icon }
+  productEntity: BloodredCassette
   cost:
     Telecrystal: 1
   categories:
@@ -1610,3 +1649,13 @@
     Telecrystal: 8
   categories:
   - UplinkPointless
+
+- type: listing
+  id: UplinkCustomLawboard
+  name: uplink-customboard-name
+  description: uplink-customboard-desc
+  productEntity: SyndicateCustomLawboard
+  cost:
+    Telecrystal: 15 # Same price as what Antimov was. Might be worth increasing the price for nukies as they can do some BAD things with this.
+  categories:
+  - UplinkDisruption

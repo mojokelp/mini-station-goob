@@ -178,6 +178,7 @@
   - PlushieSpaceLizard
   - PersonalAI # Goobstation
   - GoldenPersonalAI # Goobstation
+  - CrewCassette # Goobstation
   - ThreeCandles
   - Lighter
   - CigPackGreen
@@ -286,6 +287,7 @@
   - LoadoutSpeciesPlasma # Goobstation
   - EmergencyWaterVapor # Delta-V
   - EmergencySilicon
+  - LoadoutSpeciesAbductorTranslator # CorvaxGoob-Species
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -346,6 +348,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - VeteranCaptainCloak # goob
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -436,6 +439,7 @@
   - LightBrownMJ
   - BrownMJ
   - MaroonMJ
+  - QuarterzipJumpsuit
  # goob changes end
 
 - type: loadoutGroup
@@ -1094,6 +1098,7 @@
   minLimit: 0
   loadouts:
   - AtmosphericTechnicianWintercoat
+  - AtmosOveralls # CorvaxGoob
 
 - type: loadoutGroup
   id: AtmosphericTechnicianBackpack
@@ -1284,6 +1289,7 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
+  - HeadofSecurityCloakExperimental # CorvaxGoob
   - Bodycam # Goobstation - Body cameras
 
 - type: loadoutGroup
@@ -1302,6 +1308,10 @@
   loadouts:
   - WardenHead
   - WardenBeret
+# CorvaxGoob-Loadouts-Start
+  - WardenCap
+  - WardenHeadAlt
+# CorvaxGoob-Loadouts-End
 
 - type: loadoutGroup
   id: WardenJumpsuit
@@ -1356,6 +1366,7 @@
   loadouts:
   - SecurityBelt
   - SecurityWebbing
+  - SecurityJudoBelt # Goobstation - Martial Arts
 
 - type: loadoutGroup
   id: SecurityOuterClothing
