@@ -71,6 +71,8 @@
     - id: OmnizineChemistryBottle
     - id: OmnizineChemistryBottle
     - id: HypoBlueshield
+    - id: ClothingShoesBootsMagBlueshield
+    - id: JetpackBlueShieldFilled
 
 - type: entity
   id: LockerBlueshieldOfficerFilled

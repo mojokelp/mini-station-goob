@@ -113,6 +113,11 @@
     outerClothing: ClothingBlueshieldArmourVest
 
 - type: loadout
+  id: BlueshieldOfficerOuterBlueshieldArmorVestAlt
+  equipment:
+    outerClothing: ClothingOuterArmorBlueShieldAlt
+
+- type: loadout
   id: BlueshieldOfficerOuterBlueshieldArmoredJacket
   equipment:
     outerClothing: ClothingBlueshieldArmoredJacket
@@ -126,6 +131,23 @@
   id: BlueshieldOfficerOuterWinterBlueshield
   equipment:
     outerClothing: ClothingOuterWinterBlueshield
+
+# Glasses
+- type: loadout
+  id: BlueshieldOfficerOuterBlueshieldGlasses
+  equipment:
+    eyes: ClothingEyesGlassesBSO
+
+- type: loadout
+  id: BlueshieldOfficerOuterBlueshieldLenses
+  equipment:
+    eyes: ClothingEyesLensesBlueshield
+
+# PDA
+- type: loadout
+  id: BlueshieldOfficerPDA
+  equipment:
+    id: BlueshieldPDA
 
 # Neck
 - type: loadout
