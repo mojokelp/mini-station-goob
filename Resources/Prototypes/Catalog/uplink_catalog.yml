@@ -1051,7 +1051,7 @@
   description: uplink-exploding-syndicate-bomb-fake-desc
   productEntity: SyndicateBombFake
   cost:
-    Telecrystal: 2 # goob
+    Telecrystal: 1 # goob
   categories:
   - UplinkDeception
 
@@ -1232,7 +1232,7 @@
   description: uplink-surplus-bundle-desc
   productEntity: CrateSyndicateSurplusBundle
   cost:
-    Telecrystal: 20
+    Telecrystal: 30
   categories:
   - UplinkDisruption
   conditions:
