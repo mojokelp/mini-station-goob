@@ -12,7 +12,7 @@ namespace Content.Client.UserInterface.Systems.Ghost.Widgets;
 public sealed partial class GhostGui : UIWidget
 {
     // public GhostTargetWindow TargetWindow { get; }
-    public _Shitcode.UserInterface.Systems.Ghost.Controls.GhostBarRulesWindow GhostBarWindow { get; }
+    // public _Shitcode.UserInterface.Systems.Ghost.Controls.GhostBarRulesWindow GhostBarWindow { get; }
     // Mini edit - для красивой панельки призрака
     public MiniGhostTargetWindow TargetWindow { get; }
     public GhostBarRulesWindow GhostBarWindow { get; } // CorvaxGoob-GhostBar
@@ -29,7 +29,7 @@ public sealed partial class GhostGui : UIWidget
 
         // TargetWindow = new GhostTargetWindow();
 
-        GhostBarWindow = new _Shitcode.UserInterface.Systems.Ghost.Controls.GhostBarRulesWindow();
+        // GhostBarWindow = new _Shitcode.UserInterface.Systems.Ghost.Controls.GhostBarRulesWindow();
         // Mini edit - для красивой панельки призрака
         TargetWindow = new MiniGhostTargetWindow();
         GhostBarWindow = new GhostBarRulesWindow(); // CorvaxGoob-GhostBar

@@ -292,7 +292,7 @@
     - id: HoPIDCard
     - id: IDComputerCircuitboard
     #- id: ComputerFundingAllocationFlatpack # Goobstation #CorvaxGoob-QuarterMaster-finance
-    - id: ComputerCargoRequestServiceFlatpack # Goobstation 
+    - id: ComputerCargoRequestServiceFlatpack # Goobstation
     - id: PrinterDocFlatpack #CorvaxGoob-Docprinter
     - id: RubberStampApproved
     - id: RubberStampDenied
@@ -529,6 +529,7 @@
     - id: CigarGoldCase
       prob: 0.50
     - id: ClothingBeltSecurityFilled
+    - id: WeaponEnergyShotgun # Goobstation
     - id: ClothingEyesGlassesSecurity
     - id: ClothingHeadsetAltSecurity
     - id: ClothingMaskNeckGaiter
