@@ -41,7 +41,7 @@
                     </BoxContainer>
 
                     <BoxContainer Orientation="Vertical" SeparationOverride="2" HorizontalExpand="True">
-                        <Label Text="Время до следующего вызова (сек):" />
+                        <Label Text="Задержка(сек):" />
                         <BoxContainer Orientation="Horizontal" SeparationOverride="4">
                             <LineEdit Name="CooldownSeconds" HorizontalExpand="True" />
                             <Button Name="SetCooldownButton" Text="✓" ToolTip="Установить" StyleClasses="squareButton" SetWidth="30" />
