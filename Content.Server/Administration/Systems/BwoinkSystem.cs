@@ -812,13 +812,15 @@ namespace Content.Server.Administration.Systems
 
             var sponsorData = SponsorInfoComponent.listOfSponsors.FirstOrDefault(s => s.Uid == senderSession.UserId.ToString());
             var listCount = SponsorInfoComponent.listOfSponsors.Count;
-            Log.Info($"{senderSession.UserId.ToString()} {listCount}");
-            var sponsorPrefix = "";
-            if (listCount>0)
-                sponsorPrefix = "(Спонсор) ";
 
-            var displayName = $"{sponsorPrefix}{senderSession.Name} {senderSession.UserId.ToString()}";
-            Log.Error(displayName);
+            var displayName = $"{senderSession.Name}";
+
+            if (listCount > 0)
+            {
+                int miniDonateLevel = SponsorManager.GetDonateLevel(senderSession.UserId.ToString());
+                string miniDonateColor = SponsorColor.GetColorForNickname(miniDonateLevel);
+                displayName = $"[color ={miniDonateColor}]{senderSession.Name}[/color]";
+            }
 
             var bwoinkParams = new BwoinkParams(message,
                 eventArgs.SenderSession.UserId,
