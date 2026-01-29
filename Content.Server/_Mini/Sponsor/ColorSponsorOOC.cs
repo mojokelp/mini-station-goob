@@ -32,32 +32,32 @@ public class SponsorColor
         }
         return color;
     }
-    public static string GetColorForText(int DonateLvl)
-    {
-        string color = "#aa00ff";
-        switch (DonateLvl)
-        {
-            case 1:
-                color = "#77d700";
-                return color;
-                break;
-            case 2:
-                color = "#c0c0c0";
-                return color;
-                break;
-            case 3:
-                color = "#ffd700";
-                return color;
-                break;
-            case 4:
-                color = "#8b00ff";
-                return color;
-                break;
-            case 5:
-                color = "#c0c0c0";
-                return color;
-                break;
-        }
-        return color;
-    }
+    // public static string GetColorForText(int DonateLvl)
+    // {
+    //     string color = "#aa00ff";
+    //     switch (DonateLvl)
+    //     {
+    //         case 1:
+    //             color = "#77d700";
+    //             return color;
+    //             break;
+    //         case 2:
+    //             color = "#c0c0c0";
+    //             return color;
+    //             break;
+    //         case 3:
+    //             color = "#ffd700";
+    //             return color;
+    //             break;
+    //         case 4:
+    //             color = "#8b00ff";
+    //             return color;
+    //             break;
+    //         case 5:
+    //             color = "#c0c0c0";
+    //             return color;
+    //             break;
+    //     }
+    //     return color;
+    // }
 }
