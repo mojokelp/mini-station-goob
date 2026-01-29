@@ -34,27 +34,27 @@ public class SponsorColor
     // }
     public static string GetColorForText(int DonateLvl)
     {
-        string color = "#aa00ff";
+        string color = "#87cefa";
         switch (DonateLvl)
         {
             case 1:
-                color = "#77d700";
+                color = "#87cefa";
                 return color;
                 break;
             case 2:
-                color = "#c0c0c0";
+                color = "#87cefa";
                 return color;
                 break;
             case 3:
-                color = "#ffd700";
+                color = "#87cefa";
                 return color;
                 break;
             case 4:
-                color = "#8b00ff";
+                color = "#87cefa";
                 return color;
                 break;
             case 5:
-                color = "#c0c0c0";
+                color = "#87cefa";
                 return color;
                 break;
         }
