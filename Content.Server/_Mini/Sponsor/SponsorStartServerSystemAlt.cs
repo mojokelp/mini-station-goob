@@ -1,53 +1,30 @@
 using System;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using System.Threading.Tasks;
-using Content.Shared.GameTicking;
 using Npgsql;
-using Robust.Shared.Configuration;
-using Robust.Shared.GameObjects;
 using Robust.Shared.IoC;
+using Robust.Shared.Configuration;
 using Robust.Shared.Log;
-
-namespace Content.Server.Sponsors;
+using Robust.Shared.GameObjects; // Нужно для EntitySystem
 
 public sealed class SponsorSystem : EntitySystem
 {
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
-    // Структура данных и список
+    // Оставляем только это определение
     public record struct SponsorInfo(string Uid, int Level);
+
     public ImmutableList<SponsorInfo> Sponsors { get; private set; } = ImmutableList<SponsorInfo>.Empty;
 
     public override void Initialize()
     {
         base.Initialize();
-
-        // Подписываемся на окончание раунда для обновления данных
-        SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
-
-        // Загружаем данные сразу при старте сервера
+        // Используем _ = для игнорирования возвращаемого значения Task
         _ = LoadSponsors();
     }
 
-    private void OnRoundEnd(RoundEndMessageEvent ev)
-    {
-        // Обновляем список асинхронно, чтобы не задерживать показ статистики раунда
-        _ = Task.Run(async () =>
-        {
-            try
-            {
-                await LoadSponsors();
-                Log.Info("[Sponsors] Данные успешно обновлены после раунда.");
-            }
-            catch (Exception e)
-            {
-                Log.Error($"[Sponsors] Ошибка при фоновом обновлении: {e}");
-            }
-        });
-    }
-
-    public async Task LoadSponsors()
+    private async Task LoadSponsors()
     {
         var builder = new NpgsqlConnectionStringBuilder
         {
@@ -68,10 +45,13 @@ public sealed class SponsorSystem : EntitySystem
                 JOIN discord_auth da ON ds.discord_id = da.discord_id");
 
             await using var reader = await cmd.ExecuteReaderAsync();
+
+            // ИСПРАВЛЕНО: используем локальный SponsorInfo вместо SponsorInfoComponent.SponsorInfo
             var tempList = new List<SponsorInfo>();
 
             while (await reader.ReadAsync())
             {
+                // ИСПРАВЛЕНО: Создаем объект правильного типа
                 tempList.Add(new SponsorInfo(
                     reader.GetGuid(0).ToString(),
                     reader.GetInt32(1)
@@ -79,11 +59,11 @@ public sealed class SponsorSystem : EntitySystem
             }
 
             Sponsors = tempList.ToImmutableList();
-            Log.Info($"[Sponsors] Загружено {Sponsors.Count} спонсоров из БД.");
+            Log.Info($"[Sponsors] Загружено {Sponsors.Count} спонсоров.");
         }
         catch (Exception ex)
         {
-            Log.Error($"[Sponsors] Критическая ошибка БД: {ex}");
+            Log.Error($"Ошибка БД спонсоров: {ex}");
         }
     }
 }

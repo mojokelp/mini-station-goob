@@ -13,7 +13,7 @@ public sealed class DonatorStartupSystem : EntitySystem
     protected override void PostInject()
     {
         base.PostInject();
-        Task.Run(async () => await LoadSponsorsToStaticList());
+        //Task.Run(async () => await LoadSponsorsToStaticList());
     }
     
     public async Task LoadSponsorsToStaticList()

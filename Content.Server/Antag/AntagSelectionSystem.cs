@@ -644,35 +644,27 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             if (HasPrimaryAntagPreference(session, def))
             {
                 preferredList.Add(session);
-                if (SponsorInfoComponent.listOfSponsors.Exists(s => s.Uid == session.UserId.ToString()))
+                //mini-station donate privellege
+                var sponsorSys = EntitySystem.Get<SponsorSystem>();
+                var sponsor = sponsorSys.Sponsors.FirstOrDefault(s => s.Uid == session.UserId.ToString());
+
+                if (sponsor.Level > 0)
                 {
-                    if (def.PrefRoles.Contains("Traitor") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 0 || def.PrefRoles.Contains("Thief") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 0)
+                    var level = sponsor.Level;
+
+                    // Проверяем условия по ролям и уровням
+                    bool matchesTier1 = (def.PrefRoles.Contains("Traitor") || def.PrefRoles.Contains("Thief")) && level > 0;
+                    bool matchesTier2 = (def.PrefRoles.Contains("HeadRev") || def.PrefRoles.Contains("Zombie") || def.PrefRoles.Contains("Abductor")) && level > 1;
+                    bool matchesTier3 = (def.PrefRoles.Contains("Nukeops") || def.PrefRoles.Contains("Devil") || def.PrefRoles.Contains("Cultist")) && level > 2;
+                    bool matchesTier4 = level > 3;
+
+                    // Если хоть одно условие сработало — добавляем веса
+                    if (matchesTier1 || matchesTier2 || matchesTier3 || matchesTier4)
                     {
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                    }
-                    if (def.PrefRoles.Contains("HeadRev") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Zombie") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1 || def.PrefRoles.Contains("Abductor") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 1)
-                    {
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                    }
-                    if (def.PrefRoles.Contains("Nukeops") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2 || def.PrefRoles.Contains("Devil") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2 || def.PrefRoles.Contains("Cultist") && SponsorManager.GetDonateLevel(session.UserId.ToString()) > 2)
-                    {
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                    }
-                    if (SponsorManager.GetDonateLevel(session.UserId.ToString()) > 3)
-                    {
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
-                        preferredList.Add(session);
+                        for (var i = 0; i < 4; i++)
+                        {
+                            preferredList.Add(session);
+                        }
                     }
                 }
             }

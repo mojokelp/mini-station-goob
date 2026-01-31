@@ -809,21 +809,13 @@ namespace Content.Server.Administration.Systems
 
             if (_rateLimit.CountAction(eventArgs.SenderSession, RateLimitKey) != RateLimitStatus.Allowed)
                 return;
-
-            var displayName = $"{senderSession.Name}";
-
-            displayName = $"{SponsorInfoComponent.listOfSponsors.Count} {senderSession.UserId.ToString()} {SponsorManager.GetDonateLevel(senderSession.UserId.ToString())} ";
-            if (SponsorInfoComponent.listOfSponsors.Count > 0)
-            {
-                var first = SponsorInfoComponent.listOfSponsors[0];
-                displayName = displayName + $" 1st {first.Uid} {first.DonateLevel} 1st end";
-            }
-
+            var displayName = senderSession.Name;
             //mini-station donate color
-            if (SponsorInfoComponent.listOfSponsors.Any(d => string.Equals(d.Uid, senderSession.UserId.ToString(), StringComparison.OrdinalIgnoreCase)))
+            var sponsorSys = EntitySystem.Get<SponsorSystem>();
+            var sponsor = sponsorSys.Sponsors.FirstOrDefault(d => d.Uid == senderSession.UserId.ToString());
+            if (sponsor.Level > 0)
             {
-                int miniDonateLevel = SponsorManager.GetDonateLevel(senderSession.UserId.ToString());
-                string miniDonateColor = SponsorColor.GetColorForNickname(miniDonateLevel);
+                string miniDonateColor = SponsorColor.GetColorForNickname(sponsor.Level);
                 displayName = $"[bold][color={miniDonateColor}]{senderSession.Name}[/color][/bold]";
             }
             //mini-station

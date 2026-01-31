@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+//уже не актуально но оставим на всякий случай
 internal class SponsorInfoComponent
 {
     public class SponsorInfo
