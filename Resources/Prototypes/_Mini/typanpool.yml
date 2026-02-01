@@ -14,11 +14,6 @@
     - Typan
 
   - type: additionalMap
-    id: MiniSilly
-    maps:
-    - Typan
-
-  - type: additionalMap
     id: Lambda
     maps:
     - Typan
