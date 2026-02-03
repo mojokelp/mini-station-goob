@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.0
   forkId: ""
   forkVersion: ""
-  time: 02/03/2026 22:47:03
+  time: 02/03/2026 23:02:25
   entityCount: 12902
 maps:
 - 1
@@ -6422,7 +6422,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 23.5,38.5
       parent: 2
-- proto: AirlockExternalGlassShuttleMining
+- proto: AirlockExternalGlassShuttleMiningFilled
   entities:
   - uid: 12874
     components:
